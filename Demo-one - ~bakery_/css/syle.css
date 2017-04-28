@@ -8,9 +8,14 @@ body {
     font-size: 18px;
 }
 
+
+/*WELCOM CSS*/
+.wrapper{
+  position: relative;
+}
 .navbare {
     position: absolute;
-    width: 100%
+    width: 100%;
 }
 
 .navbar-brand {
@@ -51,10 +56,20 @@ body {
     color: black;
 }
 
-.introduction img{
-  width: 100%;
 
+.background-breads {
+    width: 100%;
+    height: 100%;
 }
+
+.introduction {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    margin-left: -25%;
+    text-align: center;
+}
+
 .introducing-text h1 {
     color: white;
     font-family: Playfair Display;
@@ -62,24 +77,48 @@ body {
     font-weight: bold;
     letter-spacing: 5px;
     text-shadow: 0px 0px 20px black;
-
 }
 
 .text-slogan p {
-    color: white;
+    margin-top: 30px;
+    color: black;
     font-family: Karla;
+    font-weight: bold;
     font-size: 1.2em;
     letter-spacing: 2px;
-    text-shadow: 0px 0px 10px white;
+    text-shadow: 0px 0px 30px white;
+}
+
+.text-slogan p span {
+    display: block;
 }
 
 .daily-menu-button {
     padding: 15px 30px;
-    background: rgba(186, 187, 181, 0.62);
+    background: rgba(240, 175, 10, 0.8);
     border: none;
-    margin: 10px;
+    margin-top: 50px;
     border-radius: 10px;
     color: white;
     font-family: Josefin Sans;
     font-weight: bold;
 }
+
+
+/*DAILY MENU*/
+/*OUR RECIPES*/
+
+/*.background-recipes{
+  width: 100%;
+  position: fixed;
+}*/
+
+
+
+/*.avatar{
+  position: absolute;
+  top: 150px;
+}*/
+
+
+/*CONTACTS*/

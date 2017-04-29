@@ -284,7 +284,6 @@ body {
 
 
 /*breakfast*/
-
 .yellow {
     color: rgb(246, 215, 80);
 }
@@ -312,9 +311,8 @@ body {
 }
 
 
-/*luch*/
-
-.red {
+/*lunch*/
+.blue {
     color: rgb(98, 161, 236);
     font-weight: bolder;
 }

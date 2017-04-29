@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Bakery/Restaurant</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="manifest" href="./fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/syle.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="contacts">
+
+    <header>
+        <nav class="navbare">
+            <div class="">
+                <a class="navbar-brand" href="#">Bakery Restaurant</a>
+            </div>
+
+
+            <div class="container-nav">
+                <ul>
+                    <li><a href="./index.html">WELCOME</a></li>
+                    <li><a href="./our-daily-menu.html">DAILY MENU</a></li>
+                    <li><a href="./recipes.html">OUR RECIPES</a></li>
+                    <li><a href="./contacts.html" class="active">CONTACTS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container contacts-position">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <div id="map"></div>
+                <script>
+                    function initMap() {
+                        var uluru = {
+                            lat: -62.6453605,
+                            lng: -60.155217
+                        };
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 5,
+                            center: uluru
+                        });
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCswR2Y_E9xomaTZ4aEmadO0UH5i-LdJC8&callback=initMap"></script>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+
+                <div class="meal-panel no-thumb thumbnail">
+
+
+                    <h4 class="meal-title">Contact us:</h4>
+
+                    <div class="address-content">
+                        <address>
+                        <span> <i class="fa fa-map-marker footer-icon" aria-hidden="true"></i>1010 Livinghton Island</span>
+                        <span>Antartica, Example 0987</span>
+                      </address>
+                    </div>
+
+                    <div class="working-time">
+                        <span><i class="fa fa-clock-o footer-icon" aria-hidden="true"></i>Mon-Sat 8:00-18:00</span>
+                        <span>Sunday CLOSED</span>
+                    </div>
+
+                    <div class="mail">
+                        <i class="fa fa-envelope footer-icon" aria-hidden="true"></i> <a href="mailto:#">exam.ple@example.com</a>
+                    </div>
+
+                    <div class="telephone">
+                        <i class="fa fa-phone footer-icon" aria-hidden="true"></i> <a href="callto:1234567">Call 123-4567</a>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

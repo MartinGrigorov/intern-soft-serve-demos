@@ -10,11 +10,48 @@ body {
 
 
 /*WELCOM CSS*/
-.wrapper{
-  position: relative;
+
+body {
+    min-height: 100vh;
+    height: auto;
 }
+
+.home {
+    background: url(../img/breads.jpg) fixed no-repeat top center;
+    background-size: cover;
+}
+
+.our-daily {
+    background: url(../img/our-daily-menu.jpg) fixed no-repeat top center;
+    background-size: cover;
+}
+
+.recipes {
+    background: url(../img/recipes-backgrpund-use.jpg) fixed no-repeat top center;
+    background-size: cover;
+}
+
+.contacts {
+    background: url(../img/recipes-backgrpund.jpg) fixed no-repeat top center;
+    background-size: cover;
+}
+
+.breakfast {
+    background: url(../img/breakfast-background.jpg) fixed no-repeat top center;
+    background-size: cover;
+}
+
+.lunch {
+    background: url(../img/Lunch-background.jpg) fixed no-repeat top center;
+    background-size: cover;
+}
+
+.dinner {
+    background: url(../img/dinner-background.jpg) fixed no-repeat top center;
+    background-size: cover;
+}
+
 .navbare {
-    position: absolute;
     width: 100%;
 }
 
@@ -24,38 +61,39 @@ body {
     transform: rotate(-12deg);
     font-size: 1.5em;
     margin-top: 20px;
-    color: black;
-    text-shadow: 0 0 15px white;
-}
-
-.navbar-brand:hover {
     color: white;
     text-shadow: 0 0 15px black;
 }
 
-.container-nav ul {
-    list-style-type: none;
+.navbar-brand:hover {
+    color: black;
+    text-shadow: 0 0 15px white;
+}
+
+.container-nav {
+    width: 100%;
     background: rgba(186, 187, 181, 0.62);
     font-size: 0.9em;
 }
 
 .container-nav ul li {
     display: inline-block;
-    padding: 25px;
+    list-style-type: none;
 }
 
 .container-nav ul li a {
+    display: block;
     padding: 25px;
     text-decoration: none;
-    color: white;
+    font-size: 1.1em;
+    color: black;
     font-family: Josefin Sans;
     font-weight: bold;
 }
 
-.container-nav ul li a:hover {
-    color: black;
+.container-nav ul li a:hover, .container-nav ul li a.active {
+    color: white;
 }
-
 
 .background-breads {
     width: 100%;
@@ -63,10 +101,9 @@ body {
 }
 
 .introduction {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    margin-left: -25%;
+    margin: 200px auto 0 auto;
+    padding-bottom: 50px;
+    width: 90%;
     text-align: center;
 }
 
@@ -106,19 +143,180 @@ body {
 
 
 /*DAILY MENU*/
+
+.meal-panel {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px 0;
+    border: none;
+}
+
+.meal-title {
+    color: black;
+    font-family: Josefin Sans;
+    font-weight: bold;
+    margin: 20px 0 100px 0;
+    font-size: 1.7em;
+}
+
+.btn-panel {
+    background: none;
+    border: 2px solid rgb(150, 112, 12);
+    color: rgb(150, 112, 12);
+    border-radius: 30px;
+    font-family: Josefin Sans;
+    font-weight: 700;
+}
+
+.btn-panel.focus, .btn-panel:focus, .btn-panel:hover {
+    border: 2px solid #333;
+    color: #333;
+}
+
+.item {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 320px;
+    border-radius: 5px;
+}
+
+.item img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.meal-panel:hover .item img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
 /*OUR RECIPES*/
 
-/*.background-recipes{
-  width: 100%;
-  position: fixed;
-}*/
+.meal-panel.no-thumb h4 {
+    margin-bottom: 20px;
+}
+
+.meal-panel.no-thumb {
+    padding: 25px;
+}
+
+.meal-panel img:last-child {
+    margin-bottom: 20px;
+}
 
 
 
-/*.avatar{
-  position: absolute;
-  top: 150px;
-}*/
+.video {
+    width: 100%;
+}
+
+.recipe-text p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.recipe-text ol li {
+    margin: 10px 0;
+}
+
+.ingridients {
+    margin-left: 20px;
+}
+
+.ingridients li {
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.recipes-porsions input {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.caloris {
+    font-family: Josefin Sans;
+    font-weight: bold;
+    font-size: 1.2em;
+}
 
 
 /*CONTACTS*/
+
+.contacts-position {
+    margin-top: 200px;
+}
+
+.container address span {
+    display: block;
+}
+
+.container .working-time span {
+    display: block;
+}
+
+.container .footer-icon {
+    font-size: 1.4em;
+    margin-right: 5px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.mail, .telephone {
+    margin-top: 15px;
+}
+
+.container .mail a, .telephone a {
+    color: #333;
+}
+
+.container .mail a:hover, .telephone a:hover {
+    text-decoration: none;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/*breakfast*/
+
+.yellow {
+    color: rgb(246, 215, 80);
+}
+
+.order-panel {
+    margin-top: 150px;
+}
+
+.price, .discount, .total {
+    font-family: Josefin Sans;
+    font-weight: bold;
+}
+
+.bigger {
+    font-size: 2em;
+}
+
+.discount {
+    color: rgb(246, 215, 80);
+    text-shadow: 0 0 10px black;
+}
+
+.total-stipe {
+    border: 1px solid #999;
+}
+
+
+/*luch*/
+
+.red {
+    color: rgb(98, 161, 236);
+    font-weight: bolder;
+}

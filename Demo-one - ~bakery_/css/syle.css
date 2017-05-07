@@ -284,6 +284,7 @@ body {
 
 
 /*breakfast*/
+
 .yellow {
     color: rgb(246, 215, 80);
 }
@@ -304,14 +305,29 @@ body {
 .discount {
     color: rgb(246, 215, 80);
     text-shadow: 0 0 10px black;
+    visibility: hidden;
 }
 
 .total-stipe {
     border: 1px solid #999;
 }
 
+#orderButton {
+    padding: 10px 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#orderIDp {
+    visibility: hidden;
+    border-bottom: 2px solid blue;   
+}
+
 
 /*lunch*/
+
 .blue {
     color: rgb(98, 161, 236);
     font-weight: bolder;

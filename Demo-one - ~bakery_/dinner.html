@@ -80,10 +80,14 @@
 
                             <div class="order-panel text-center">
                                 <div class="meal-panel no-thumb thumbnail">
+
                                     <h4 class="meal-title">Order here:</h4>
+
                                     <div class="form-group recipes-porsions">
-                                        <label for="Quantity">Quantity:</label>
-                                        <input type="number" name="Quantity" value="1" class="form-control">
+                                        <label for="Quantity">
+                                            Quantity:
+                                          </label>
+                                        <input type="number" min="1" name="Quantity" value="1" class="form-control quantity" onchange="calc()">
                                     </div>
 
                                     <p class="price">
@@ -91,18 +95,21 @@
                                     </p>
 
                                     <p class="discount">
-                                        <span class="bigger">-$ <span class="single-discount">7</span></span> (20%).
+                                        <span class="bigger">-$ <span class="single-discount">5</span></span> (20%).
                                     </p>
-
                                     <hr class="total-stipe" />
 
                                     <p class="total">
-                                        <span class="bigger">$ <span class="total-price">27</span></span>
+                                        <span class="bigger">$ <span class="total-price">34</span></span>
                                     </p>
 
                                     <p class="caloris">
-                                        <span class="ccl">400</span> kcl per serving
+                                        <span class="ccl">420</span> kcl per serving
                                     </p>
+
+                                    <button id="orderButton" class="btn" onclick="orderID()">Order now</button>
+
+                                    <p id="orderIDp">Your order number is: <strong id="orderID"></strong></p>
                                 </div>
                             </div>
                         </div>
@@ -111,6 +118,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>

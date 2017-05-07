@@ -128,7 +128,7 @@
 
                                     <div class="form-group recipes-porsions">
                                         <label for="porsions">Serves:</label>
-                                        <input type="number" name="porsions" value="6" class="form-control">
+                                        <input id="serving" type="number" name="porsions" min="0" value="5" class="form-control" onchange="calculateIngridients()">
                                     </div>
 
                                     <p class="caloris">
@@ -136,18 +136,18 @@
                                     </p>
 
                                     <ul class="ingridients">
-                                        <li><span>5</span> slices bacon</li>
-                                        <li><span>1</span> pound chicken breasts (2 each), sliced</li>
+                                        <li><span class="amount" data-amount="300">300</span> grams bacon</li>
+                                        <li><span class="amount" data-amount="450">450</span> grams chicken breasts (2 each), sliced</li>
                                         <li>Salt and pepper, to taste</li>
-                                        <li><span>2 &shy;½</span> teaspoons Italian seasoning</li>
-                                        <li><span>1 &shy;½</span> teaspoons smoked paprika</li>
-                                        <li><span>½</span> teaspoon red chili flakes</li>
-                                        <li><span>5</span> ounces baby spinach</li>
-                                        <li><span>4 to &shy;5</span> small tomatoes, diced</li>
-                                        <li><span>5</span> cloves garlic, minced</li>
-                                        <li><span>1 &shy;½</span> cups heavy cream</li>
-                                        <li><span>2</span> cups Parmesan, shredded</li>
-                                        <li><span>12</span> ounces penne, cooked al dente</li>
+                                        <li><span class="amount" data-amount="2.5">2.5</span> teaspoons Italian seasoning</li>
+                                        <li><span class="amount" data-amount="1.5">1.5</span> teaspoons smoked paprika</li>
+                                        <li><span class="amount" data-amount="0.5">0.5</span> teaspoon red chili flakes</li>
+                                        <li><span class="amount" data-amount="140">140</span> grams baby spinach</li>
+                                        <li><span class="amount" data-amount="4">4</span> small tomatoes, diced</li>
+                                        <li><span class="amount" data-amount="5">5</span> cloves garlic, minced</li>
+                                        <li><span class="amount" data-amount="1.5">1.5</span> cups heavy cream</li>
+                                        <li><span class="amount" data-amount="2">2</span> cups Parmesan, shredded</li>
+                                        <li><span class="amount" data-amount="340">340</span> grams penne, cooked al dente</li>
                                     </ul>
                                 </div>
                             </div>
@@ -157,6 +157,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>

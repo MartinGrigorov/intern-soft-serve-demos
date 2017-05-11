@@ -6,21 +6,21 @@ function calc() {
         price = Number(document.getElementsByClassName('single-price')[0].innerHTML),
         newPrice = 0,
 
-        totalPrice = quantity * price;
+        totalPrice = (quantity * price).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");;
 
     if (quantity > 2) {
-        newPrice = (quantity * price) / 1.2;
+        newPrice = ((quantity * price) / 1.2).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
 
-        discount = totalPrice - newPrice;
+        discount = (totalPrice - newPrice).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
         totalPrice = newPrice;
 
         document.getElementsByClassName('discount')[0].style.visibility = 'visible';
-        document.getElementsByClassName('single-discount')[0].innerHTML = (discount).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+        document.getElementsByClassName('single-discount')[0].innerHTML = (discount);
     } else {
         document.getElementsByClassName('discount')[0].style.visibility = 'hidden';
     }
 
-    document.getElementsByClassName('total-price')[0].innerHTML = (totalPrice).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+    document.getElementsByClassName('total-price')[0].innerHTML = (totalPrice);
 }
 
 //  function that takes char from the string-number times

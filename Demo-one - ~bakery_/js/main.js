@@ -63,15 +63,6 @@ function calculateIngridients() {
 
         var currentAmount = (originalAmount * qnt) / 5;
         amounts[i].innerHTML = currentAmount;
-
-        for (let i = 0; i < kilos.length; i++) {
-          if (currentAmount > 1000) {
-              kilos[i].innerHTML = 'kilo';
-          }else {
-            kilos[i].innerHTML = 'grams';
-          }
-
-        }
     }
 
 }

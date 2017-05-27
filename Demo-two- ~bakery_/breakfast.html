@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Breakfast - Bakery/Restaurant</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="manifest" href="./fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/syle.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+</head>
+
+<body class="breakfast">
+
+    <header>
+        <nav class="navbare">
+            <div class="">
+                <a class="navbar-brand" href="#">Bakery Restaurant</a>
+            </div>
+
+
+            <div class="container-nav">
+                <ul>
+                    <li><a href="./index.html">WELCOME</a></li>
+                    <li><a href="./our-daily-menu.html">DAILY MENU</a></li>
+                    <li><a href="./recipes.html">OUR RECIPES</a></li>
+                    <li><a href="./contacts.html">CONTACTS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-6 col-sm-12">
+                            <div class="order-content text-center">
+                                <div class="introducing-text">
+                                    <h1>Your <span class="yellow">B</span>reakfast, cooked with Love</h1>
+                                </div>
+                            </div>
+
+                            <div class="meal-panel no-thumb thumbnail recipe-text">
+                                <h4 class="meal-title">Eggs Benedict</h4>
+                                <img src="./img/breakfast-Eggs_Benedict.jpg" alt="" class="img-rounded" />
+                                <p>Hot buttered English muffins, Canadian-style bacon, and poached eggs are topped with a heavenly drizzle of hollandaise sauce. Wonderful for Easter, Mother's Day, or anytime you want to treat yourself to the best breakfast
+                                    in the world! Serve with roasted potatoes for mopping up the extra egg yolk and hollandaise. If you prefer, you can substitute ham for the Canadian bacon in this recipe.</p>
+
+                                <h4 class="meal-title">Chocolate lava cake with strawberries</h4>
+                                <img src="./img/breakfast-desert.jpg" alt="" class="img-rounded" />
+                                <p>These mini chocolate strawberry lava cakes feature a rich molten chocolate and a strawberry topping are a plesure to enjoy.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="order-panel text-center">
+                                <div class="meal-panel no-thumb thumbnail">
+
+                                    <h4 class="meal-title">Order here:</h4>
+
+                                    <div class="form-group recipes-porsions">
+                                        <label for="Quantity">
+                                            Quantity:
+                                          </label>
+                                        <input type="number" min="1" name="Quantity" value="1" class="form-control quantity" id="quantity">
+                                    </div>
+
+                                    <p class="price">
+                                        <span class="bigger">$ <span class="single-price">20</span></span> VAT incl.
+                                    </p>
+
+                                    <p class="discount">
+                                        <span class="bigger">-$ <span class="single-discount"></span></span>
+                                    </p>
+
+                                    <hr class="total-stipe" />
+
+                                    <p class="total">
+                                        <span class="bigger">$ <span class="total-price">20.00</span></span>
+                                    </p>
+
+                                    <p class="caloris">
+                                        <span class="ccl">320</span> kcl per serving
+                                    </p>
+
+                                    <button id="orderButton" class="btn">Order now</button>
+
+                                    <p id="orderIDp">Your order number is: <strong id="orderID"></strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+
+</body>
+
+</html>

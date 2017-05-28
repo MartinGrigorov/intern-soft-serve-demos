@@ -16,11 +16,11 @@ body {
     height: auto;
 }
 
-.home header{
-  position: fixed;
-  top:0;
-  width: 100%;
-  z-index: 10;
+.home header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 .our-daily {
@@ -143,23 +143,26 @@ body {
     font-weight: bold;
 }
 
-.sliderWrapper{
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top:0;
-  overflow: hidden;
-  z-index: 1;
+.sliderWrapper {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
 }
-.sliderWrapper img{
-  position: absolute;
-  top:0;
-  left: 0;
-  z-index: 1;
+
+.sliderWrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
-.sliderWrapper img.active{
-  z-index: 3;
+
+.sliderWrapper img.active {
+    z-index: 3;
 }
+
 
 /*DAILY MENU*/
 
@@ -176,6 +179,7 @@ body {
     margin: 20px 0 100px 0;
     font-size: 1.7em;
 }
+
 .recipe-title {
     color: black;
     font-family: Josefin Sans;
@@ -219,19 +223,22 @@ body {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+
+
 /*OUR RECIPES*/
 
-#filter{
+#filter {
     padding: 0;
     margin: 0;
     text-align: center;
 }
-#filter li{
-  list-style: none;
-  display: inline-block;
-  }
 
-  #filter li a{
+#filter li {
+    list-style: none;
+    display: inline-block;
+}
+
+#filter li a {
     margin: 3px;
     text-decoration: none;
     display: block;
@@ -240,19 +247,19 @@ body {
     padding: 10px;
     border-radius: 10px;
     color: rgb(63, 116, 233);
-  }
+}
 
-    #filter li a:hover,
-    #filter li.current a{
-      text-decoration: none;
-      display: block;
-      border: 2px solid rgb(63, 116, 233);
-      min-width: 150px;
-      padding: 10px;
-      border-radius: 10px;
-      background: rgb(63, 116, 233);
-      color:white;
-    }
+#filter li a:hover, #filter li.current a {
+    text-decoration: none;
+    display: block;
+    border: 2px solid rgb(63, 116, 233);
+    min-width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(63, 116, 233);
+    color: white;
+}
+
 
 /*SINGLE RECIPES*/
 
@@ -305,7 +312,7 @@ body {
 /*CONTACTS*/
 
 .contacts-position {
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .container address span {
@@ -343,7 +350,6 @@ body {
 
 
 /*breakfast*/
-
 .yellow {
     color: rgb(246, 215, 80);
 }

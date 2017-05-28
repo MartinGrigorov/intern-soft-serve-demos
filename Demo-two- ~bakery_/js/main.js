@@ -119,3 +119,13 @@ function myDate() {
 $(document).ready(function() {
     myDate();
 });
+
+// function that zoomes images
+$('.zoom').elevateZoom({
+  cursor: "crosshair",
+  easing:true,
+  tint:true,
+  tintColour:'#333',
+  tintOpacity:0.5,
+  scrollZoom:true
+});

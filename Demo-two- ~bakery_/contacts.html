@@ -26,9 +26,10 @@
 
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/syle.css">
     <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body class="contacts">
@@ -53,7 +54,6 @@
 
     <div class="container-fluid contacts-position">
         <div class="row">
-
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div id="map"></div>
                 <script>
@@ -74,37 +74,94 @@
                 </script>
                 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCswR2Y_E9xomaTZ4aEmadO0UH5i-LdJC8&callback=initMap"></script>
             </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
 
-            <div class="col-lg-6 col-md-4 col-sm-12">
-                <div class="meal-panel no-thumb thumbnail text-center">
+              <div class="meal-panel no-thumb thumbnail">
 
-                    <h4 class="meal-title">Contact us:</h4>
+                  <h4 class="meal-title">For suggestions and requests, Please write here:</h4>
 
-                    <div class="address-content">
-                        <address>
-                        <span> <i class="fa fa-map-marker footer-icon" aria-hidden="true"></i>1010 Livinghton Island</span>
-                        <span>Antartica, Example 0987</span>
-                      </address>
-                    </div>
+                  <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                      <div class="row">
+                          <label for="name">Your name:</label><br />
+                          <input class="name" name="name" placeholder="Please enter your name" type="text" tabindex="1"   autofocus value="" />
+                          <p class="erors-name erors-input">Incorect name.</p>
+                      </div>
+                      <div class="row">
+                          <label for="email">Your email:</label><br />
+                          <input class="email" name="email" placeholder="Please enter your e-mail address" type="email" tabindex="2"  value="" />
+                          <p class="erors-email erors-input">Incorect e-mail.</p>
+                      </div>
+                      <div class="row">
+                          <label for="message">Your message:</label><br />
+                          <textarea class="textarea" name="message" placeholder="Include all the details you can"  tabindex="3" rows="5"></textarea><br />
+                          <p class="erors-textarea erors-input">Please, enter your suggestions or requests.</p>
+                      </div>
 
-                    <div class="working-time">
-                        <span><i class="fa fa-clock-o footer-icon" aria-hidden="true"></i>Mon-Sat 8:00-18:00</span>
-                        <span>Sunday CLOSED</span>
-                    </div>
-
-                    <div class="mail">
-                        <i class="fa fa-envelope footer-icon" aria-hidden="true"></i> <a href="mailto:#">exam.ple@example.com</a>
-                    </div>
-
-                    <div class="telephone">
-                        <i class="fa fa-phone footer-icon" aria-hidden="true"></i> <a href="callto:1234567">Call 123-4567</a>
-                    </div>
-                </div>
+                      <button class="btn btn-lg" type="button" id="modal-button">Send this suggestions</button>
+                  </form>
+              </div>
             </div>
+        </div>
+
+        <div class="row">
+
+          <div class="meal-panel no-thumb thumbnail text-center">
+
+
+              <h4 class="meal-title text-center">Contact us:</h4>
+
+              <div class="address-content">
+                  <address>
+                  <span> <i class="fa fa-map-marker footer-icon" aria-hidden="true"></i>1010 Livinghton Island</span>
+                  <span>Antartica, Example 0987</span>
+                </address>
+              </div>
+
+              <div class="working-time">
+                  <span><i class="fa fa-clock-o footer-icon" aria-hidden="true"></i>Mon-Sat 8:00-18:00</span>
+                  <span>Sunday CLOSED</span>
+              </div>
+
+              <div class="mail">
+                  <i class="fa fa-envelope footer-icon" aria-hidden="true"></i> <a href="mailto:#">exam.ple@example.com</a>
+              </div>
+
+              <div class="telephone">
+                  <i class="fa fa-phone footer-icon" aria-hidden="true"></i> <a href="callto:1234567">Call 123-4567</a>
+              </div>
+          </div>
 
         </div>
     </div>
+
+    <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center" id="exampleModalLabel">Information</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div id="if-close" class="alert alert-info text-center">
+                        <strong>Your message was send!</strong>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 

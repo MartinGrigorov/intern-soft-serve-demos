@@ -97,13 +97,13 @@ function myDate() {
     var hours = now.getHours();
 
     if (hours > 7 && hours < 22) {
-        if (hours > 7 && hours < 11) {
+        if (hours >= 7 && hours <= 9) {
             $('#lunch-btn, .item-lunch').attr('data-toggle', 'modal').attr('data-target', '#error').attr('href', '#');
             $('#dinner-btn, .item-dinner').attr('data-toggle', 'modal').attr('data-target', '#error').attr('href', '#');
-        } else if (hours > 11 && hours < 17) {
+        } else if (hours >= 10 && hours <= 17) {
             $('#breakfast-btn, .item-breakfast').attr('data-toggle', 'modal').attr('data-target', '#error').attr('href', '#');
             $('#dinner-btn, .item-dinner').attr('data-toggle', 'modal').attr('data-target', '#error').attr('href', '#');
-        } else if (hours > 17 && hours < 22) {
+        } else if (hours >= 18 && hours < 22) {
             $('#breakfast-btn, .item-breakfast').attr('data-toggle', 'modal').attr('data-target', '#error').attr('href', '#');
             $('#lunch-btn, .item-lunch').attr('data-toggle', 'modal').attr('data-target', '#error').attr('href', '#');
         }
@@ -120,12 +120,58 @@ $(document).ready(function() {
     myDate();
 });
 
-// function that zoomes images
-$('.zoom').elevateZoom({
-  cursor: "crosshair",
-  easing:true,
-  tint:true,
-  tintColour:'#333',
-  tintOpacity:0.5,
-  scrollZoom:true
+
+// function which validate the name input
+function nameValidation() {
+    if (!$('.name').val().match('^[a-zA-Z]{3,16}$')) {
+        $('.name').css('background-color', 'rgb(224, 27, 110)');
+        $('.erors-name').css('visibility', 'visible');
+        return false;
+    } else {
+        return true;
+    }
+}
+
+// function which validate the email input
+function emailValidation() {
+    if (!$('.email').val().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+        $('.email').css('background-color', 'rgb(224, 27, 110)');
+        $('.erors-email').css('visibility', 'visible');
+        return false;
+    } else {
+        return true;
+    }
+}
+
+// function which validate the textarea
+function textAreaValidation() {
+    if ($('.textarea').val() == '') {
+        $('.textarea').css('background-color', 'rgb(224, 27, 110)');
+        $('.erors-textarea').css('visibility', 'visible');
+        return false;
+    } else {
+        return true;
+    }
+}
+
+$('#modal-button').click(function() {
+    if (nameValidation() == false && emailValidation() == false && textAreaValidation() == false) {
+        $('#modal-button').html("Your form is not correct!");
+        $('#modal-button').css({
+          'background-color': 'rgb(224, 27, 110)',
+          'color': 'white'});
+
+    } else {
+        $('#modal-button').html("Sending....");
+    }
 });
+
+// function which zoomes images
+// $('.zoom').elevateZoom({
+//     cursor: "crosshair",
+//     easing: true,
+//     tint: true,
+//     tintColour: '#333',
+//     tintOpacity: 0.5,
+//     scrollZoom: true
+// });

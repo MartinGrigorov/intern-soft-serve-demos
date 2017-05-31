@@ -1,11 +1,12 @@
 @import url("fonts.css");
-body, div, nav, ul, li, a {
+body, div, nav, ul, li, a, h4, p {
     margin: 0;
     padding: 0;
 }
 
 body {
     font-size: 18px;
+
 }
 
 
@@ -176,7 +177,7 @@ body {
     color: black;
     font-family: Josefin Sans;
     font-weight: bold;
-    margin: 20px 0 100px 0;
+    margin: 0 0 70px 0;
     font-size: 1.7em;
 }
 
@@ -191,8 +192,9 @@ body {
 .btn-panel {
     background: none;
     border: 2px solid rgb(150, 112, 12);
-    color: rgb(150, 112, 12);
     border-radius: 30px;
+    color: rgb(119, 110, 86);
+    background-color: rgba(150, 112, 12, 0.13);
     font-family: Josefin Sans;
     font-weight: 700;
 }
@@ -222,6 +224,19 @@ body {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.order-time {
+    border: 2px solid rgb(150, 112, 12);
+    border-radius: 25px;
+    background-color: rgba(150, 112, 12, 0.13);
+    padding: 15px 0px;
+    color: rgb(119, 110, 86);
+    border-radius: 30px;
+    font-family: Josefin Sans;
+    font-weight: 700;
+    width: 95%;
+    margin: 0 auto;
 }
 
 
@@ -312,7 +327,7 @@ body {
 /*CONTACTS*/
 
 .contacts-position {
-    margin-top: 150px;
+    margin-top: 20px;
 }
 
 .container address span {
@@ -330,8 +345,8 @@ body {
     margin-right: 10px;
 }
 
-.mail, .telephone {
-    margin-top: 15px;
+.mail, .telephone, {
+    margin-bottom: 20px;
 }
 
 .container .mail a, .telephone a {
@@ -343,9 +358,10 @@ body {
 }
 
 #map {
-    height: 500px;
+    height: 600px;
     width: 100%;
     margin: 0 auto;
+    border-radius: 5px;
 }
 
 
@@ -397,4 +413,45 @@ body {
 .blue {
     color: rgb(98, 161, 236);
     font-weight: bolder;
+}
+
+
+/*contact form*/
+
+#contact_form {
+    background-color: rgba(120, 165, 233, 0.59);
+    padding: 10px 20px 30px 20px;
+    border-radius: 5px;
+}
+
+.row {
+    margin: 5px;
+}
+
+input {
+    line-height: 31px;
+}
+
+input, textarea {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.39);
+    border: solid 1px #b6c7cb;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+#modal-button {
+    background-color: rgba(120, 165, 233, 0.84);
+    color: #fff;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.erors-input{
+  font-style: italic;
+  color:rgb(224, 27, 110);
+  font-family: Josefin Sans;
+  font-weight: bold;
+  font-size: 0.9em;
+  visibility: hidden;
 }

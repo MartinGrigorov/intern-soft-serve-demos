@@ -187,7 +187,7 @@ $(function validationOfForm() {
 
     // function which validate the textarea
     function textAreaValidation() {
-        if ($('.textarea').val() == '') {
+        if ($('.textarea').val().trim() == '') {
             $('.textarea').css('background-color', 'rgb(224, 27, 110)');
             $('.erors-textarea').css('visibility', 'visible');
 
@@ -210,7 +210,7 @@ $(function validationOfForm() {
 
             function modalShow() {
                 $('#Send-message').modal('show');
-                $('#if-send').html("<strong>" + name + "</strong> , your message was send!");
+                $('#if-send').html("<strong>" + name + "</strong>, your message was sent! <br> You will receive feedback as soon as possible!");
                 $('#modal-button').html("Send this suggestions");
                 $('input').val('');
                 $('textarea').val('');

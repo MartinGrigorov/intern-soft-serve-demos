@@ -29,7 +29,7 @@ function generateOrderID(number) {
         text += possible.charAt((Math.random() * possible.length));
     }
     return text;
-}
+};
 
 // callback function witch invoke generateOrderID function and disable the form for ordering
 $('#orderButton').click(function() {
@@ -54,17 +54,18 @@ $("#serving").on('change', function() {
     });
 });
 
-$('ul#filter a').click(function() {
-    $(this).css('outline', 'none');
-    $('ul#filter .current').removeClass('current');
+//function which filtered some meal
+$('#filter a').click(function() {
+    $('.current').removeClass('current');
+
     $(this).parent().addClass('current');
 
     var filterVal = $(this).text().toLowerCase().replace(' ', '-');
 
     if (filterVal == 'all') {
-        $('#portfolio .recipe-item.hidden').fadeIn('slow').removeClass('hidden');
+        $('.recipe-item').fadeIn('slow').removeClass('hidden');
     } else {
-        $('#portfolio .recipe-item').each(function() {
+        $('.recipe-item').each(function() {
             if (!$(this).hasClass(filterVal)) {
                 $(this).fadeOut('slow').addClass('hidden');
             } else {
@@ -72,27 +73,28 @@ $('ul#filter a').click(function() {
             }
         });
     }
-
-    return false;
 });
 
+
+//function which check which is the first img and swich it to the second one.
 function cycleImages() {
     var $active = $('.sliderWrapper .active');
-    var $next = ($active.next().length > 0)
-        ? $active.next()
-        : $('.sliderWrapper img:first');
+
+    var $next = ($active.next().length > 0) ? $active.next() : $('.sliderWrapper img:first');
     $next.css('z-index', 2); //move the next image up the pile
     $active.fadeOut(1500, function() { //fade out the top image
         $active.css('z-index', 1).show().removeClass('active'); //reset the z-index and unhide the image
         $next.css('z-index', 3).addClass('active'); //make the next image the top one
     });
-}
+};
 
+//invoke the cycleImages() function
 $(window).on('load', function() {
     setInterval('cycleImages()', 2500);
 });
 
-function myDate() {
+//function for checking which time is it at this very moment.
+$(function myDate() {
     var now = new Date();
     var hours = now.getHours();
 
@@ -114,13 +116,27 @@ function myDate() {
         $('#if-close').html("Our Bakery-restaurant is closed, you can order from <br>8 O'clock till 21 O'clock");
         $('#if-close').removeClass('alert-info').addClass('alert-danger');
     }
-}
+});
 
+//invoke function myDate() when the document is ready
 $(document).ready(function() {
     myDate();
 });
 
-$(function() {
+
+// function which zoomes images
+$('.zoom').elevateZoom({
+    cursor: "crosshair",
+    easing: true,
+    tint: true,
+    tintColour: '#333',
+    tintOpacity: 0.5,
+    scrollZoom: true
+});
+
+
+//function for form validation
+$(function validationOfForm() {
     var errorName = false,
         errorEmail = false,
         errorText = false,
@@ -181,7 +197,7 @@ $(function() {
             errorText = true;
         }
     }
-
+    //function which check again the inputs if one of them is incorect the button will change his css prop
     $('#modal-button').click(function() {
         if (errorText == false || errorEmail == false || errorName == false) {
             $('#modal-button').html("Your form is not correct!");
@@ -204,14 +220,4 @@ $(function() {
         }
     });
 
-});
-
-// function which zoomes images
-$('.zoom').elevateZoom({
-    cursor: "crosshair",
-    easing: true,
-    tint: true,
-    tintColour: '#333',
-    tintOpacity: 0.5,
-    scrollZoom: true
 });

@@ -120,58 +120,98 @@ $(document).ready(function() {
     myDate();
 });
 
+$(function() {
+    var errorName = false,
+        errorEmail = false,
+        errorText = false,
+        name = '';
 
-// function which validate the name input
-function nameValidation() {
-    if (!$('.name').val().match('^[a-zA-Z]{3,16}$')) {
-        $('.name').css('background-color', 'rgb(224, 27, 110)');
-        $('.erors-name').css('visibility', 'visible');
-        return false;
-    } else {
-        return true;
+    $('input[name="name"]').focusout(function() {
+        nameValidation();
+    });
+
+    $('input[name="email"]').focusout(function() {
+        emailValidation();
+    });
+
+    $('textarea').focusout(function() {
+        textAreaValidation();
+    });
+
+    // function which validate the name input
+    function nameValidation() {
+
+        name = $('.name').val();
+
+        if ($('.name').val().match('^[a-zA-Z]{3,16}$')) {
+            $('.name').css('background-color', 'rgba(255, 255, 255, 0.39)');
+            $('.erors-name').css('visibility', 'hidden');
+            errorName = true;
+        } else {
+            $('.name').css('background-color', 'rgb(224, 27, 110)');
+            $('.erors-name').css('visibility', 'visible');
+        }
     }
-}
 
-// function which validate the email input
-function emailValidation() {
-    if (!$('.email').val().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
-        $('.email').css('background-color', 'rgb(224, 27, 110)');
-        $('.erors-email').css('visibility', 'visible');
-        return false;
-    } else {
-        return true;
+    // function which validate the email input
+    function emailValidation() {
+
+        var email = $('.email').val();
+
+        if ($('.email').val().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+            $('.email').css('background-color', 'rgba(255, 255, 255, 0.39)');
+            $('.erors-email').css('visibility', 'hidden');
+            errorEmail = true;
+        } else {
+            $('.email').css('background-color', 'rgb(224, 27, 110)');
+            $('.erors-email').css('visibility', 'visible');
+
+        }
     }
-}
 
-// function which validate the textarea
-function textAreaValidation() {
-    if ($('.textarea').val() == '') {
-        $('.textarea').css('background-color', 'rgb(224, 27, 110)');
-        $('.erors-textarea').css('visibility', 'visible');
-        return false;
-    } else {
-        return true;
+    // function which validate the textarea
+    function textAreaValidation() {
+        if ($('.textarea').val() == '') {
+            $('.textarea').css('background-color', 'rgb(224, 27, 110)');
+            $('.erors-textarea').css('visibility', 'visible');
+
+        } else {
+            $('.textarea').css('background-color', 'rgba(255, 255, 255, 0.39)');
+            $('.erors-textarea').css('visibility', 'hidden');
+            errorText = true;
+        }
     }
-}
 
-$('#modal-button').click(function() {
-    if (nameValidation() == false && emailValidation() == false && textAreaValidation() == false) {
-        $('#modal-button').html("Your form is not correct!");
-        $('#modal-button').css({
-          'background-color': 'rgb(224, 27, 110)',
-          'color': 'white'});
+    $('#modal-button').click(function() {
+        if (errorText == false || errorEmail == false || errorName == false) {
+            $('#modal-button').html("Your form is not correct!");
+            $('#modal-button').css({'background-color': 'rgb(224, 27, 110)', 'color': 'white'});
 
-    } else {
-        $('#modal-button').html("Sending....");
-    }
+        } else {
+
+            $('#modal-button').html("Sending....");
+            $('#modal-button').css({'background-color': 'rgb(120, 165, 233, 0.84)', 'color': 'white'})
+
+            function modalShow() {
+                $('#Send-message').modal('show');
+                $('#if-send').html("<strong>" + name + "</strong> , your message was send!");
+                $('#modal-button').html("Send this suggestions");
+                $('input').val('');
+                $('textarea').val('');
+
+            }
+            setTimeout(modalShow, 500);
+        }
+    });
+
 });
 
 // function which zoomes images
-// $('.zoom').elevateZoom({
-//     cursor: "crosshair",
-//     easing: true,
-//     tint: true,
-//     tintColour: '#333',
-//     tintOpacity: 0.5,
-//     scrollZoom: true
-// });
+$('.zoom').elevateZoom({
+    cursor: "crosshair",
+    easing: true,
+    tint: true,
+    tintColour: '#333',
+    tintOpacity: 0.5,
+    scrollZoom: true
+});

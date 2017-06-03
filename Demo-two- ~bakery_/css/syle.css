@@ -450,7 +450,6 @@ input, textarea {
 .erors-input{
   font-style: italic;
   color:rgb(224, 27, 110);
-  font-family: Josefin Sans;
   font-weight: bold;
   font-size: 0.9em;
   visibility: hidden;
